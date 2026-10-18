@@ -7,11 +7,17 @@ Ce depot public regroupe les extensions CEP personnalisees et les plugins natifs
 Les extensions installees et leurs fichiers sont rangees sous `extensions/` :
 
 - `CurveFusion-AE2018/` : Curve Fusion 2018.
+
+- <img width="922" height="539" alt="curve fusion" src="https://github.com/user-attachments/assets/2f2553f8-690f-4e73-b4a5-7fbbc771d402" />
+
 - `EasePro-AE2018/` : Ease Pro 3.0.5, compatible AE 2018-2020.
+- <img width="922" height="539" alt="easy pro" src="https://github.com/user-attachments/assets/6043fc72-970f-4ac6-93a1-8cc5db5c7f0c" />
+
 - `EditTools-Free-AE2020/` : EditTools Free 1.0.1.
 - `FXP-Twitch-AE2020/` : FXP Twitch 1.0.
 - `FXP-Twitch-v3/` : FXP Twitch 3.0.
-- `Overflow-AE2018/` : OVER FLOW 0.2.
+- `Overflow-AE2018/` : OVER FLOW 0.2
+.<img width="925" height="539" alt="overflow" src="https://github.com/user-attachments/assets/54c13227-bde2-4c93-9377-23308a3bb667" />
 - `PulseForge-FX-AE2020/` : PulseForge FX 1.1.
 
 Pour installer OVER FLOW sous Windows, fermez After Effects et lancez `extensions/Overflow-AE2018/INSTALL_OVERFLOW.cmd`. Pour les autres extensions, suivez le README ou les instructions inclus dans leur dossier. Relancez After Effects apres l'installation.
