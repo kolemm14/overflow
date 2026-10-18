@@ -21,11 +21,15 @@ Les noms FXP Twitch et FXP Twitch 3 designent ici les panneaux de ce depot. Ils 
 
 ### Curve Fusion 2018
 
+![Interface de Curve Fusion](https://github.com/user-attachments/assets/2f2553f8-690f-4e73-b4a5-7fbbc771d402)
+
 Editeur CEP de courbes Bezier avec points de controle manipulables, presets et options entree/sortie. Les commandes incluent appliquer, miroir, copier/coller l'easing, lineaire, maintien, vitesse nulle et continuite.
 
 Compatibilite declaree : After Effects 15.x (CC 2018).
 
 ### Ease Pro
+
+![Interface de Ease Pro](https://github.com/user-attachments/assets/6043fc72-970f-4ac6-93a1-8cc5db5c7f0c)
 
 Panneau CEP d'interpolation et d'easing : courbes integrees, poignees Bezier, application complete ou partielle, copie/collage, inversion, adoucissement, accentuation, linearisation et Custom Bounce Pro. L'extension comprend egalement des presets utilisateur.
 
@@ -50,6 +54,8 @@ Variante de developpement independante. Sa documentation decrit des styles Slide
 Compatibilite declaree : After Effects 17.x a 18.x. Le test de creation documente a ete fait dans AE 2020, mais le test complet de rendu n'a pas abouti.
 
 ### OVER FLOW
+
+![Interface de OVER FLOW](https://github.com/user-attachments/assets/54c13227-bde2-4c93-9377-23308a3bb667)
 
 Boite a outils CEP regroupant notamment l'edition de courbes Bezier, presets d'easing, commandes d'interpolation, centrage et point d'ancrage, creation de calques, bascule d'effets et de motion blur, renommage et Text Exploder.
 
