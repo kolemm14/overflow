@@ -1,16 +1,21 @@
-# Projets After Effects 2020
+# Plugins FX Pro pour After Effects 2020
 
-Ce depot rassemble les sources recuperees dans la sauvegarde de migration du 12 septembre 2026.
+Ce depot public distribue les plugins natifs FX Pro compiles pour After Effects 2020.
 
-## Projets
+## Plugins inclus
 
-- `projects/EasePro/` : sources de l'extension CEP Ease Pro pour After Effects 2020.
-- `projects/FXPro-Native/source/` : sources natives FX Pro (`.cpp`, `.h`, `.r`). Le SDK Adobe After Effects n'est pas inclus.
+- `FXPro_AuraGlow.aex`
+- `FXPro_Impact.aex`
+- `FXPro_MotionBlur.aex`
+- `FXPro_RGBSplit.aex`
+- `FXPro_Shake.aex`
+- `FXPro_SmoothTime.aex`
+- `FXPro_ZoomWhip.aex`
 
-Les binaires compiles `.aex`, l'installateur FX Pro, les presets `.ffx`, les extensions retirees et les donnees personnelles de migration ne sont pas inclus.
+Les plugins sont fournis dans `plugins/FX Pro/`. Copiez ce dossier dans le dossier `Plug-ins` d'After Effects 2020. Les presets `.ffx`, installateurs, extensions retirees et donnees personnelles de migration ne sont pas inclus.
 
-Pour construire FX Pro, il faut disposer du SDK officiel After Effects 17.1.2 et configurer un environnement de compilation compatible avec After Effects 2020.
+Ces plugins sont des binaires Windows compiles. Le depot etant public, leur telechargement est accessible a tous.
 
 ## Licence
 
-Aucune licence de redistribution n'a ete trouvee dans les fichiers source. La publication de ce depot ne constitue pas une autorisation de reutilisation ou de redistribution des projets.
+Aucune licence de redistribution n'a ete trouvee dans la sauvegarde. La publication publique ne constitue pas une autorisation de reutilisation ou de redistribution des plugins.
