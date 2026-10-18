@@ -4,7 +4,7 @@ Ce depot public regroupe les plugins natifs FX Pro pour After Effects 2020 et l'
 
 ## OVER FLOW pour AE CC 2018-2020
 
-L'extension CEP complete se trouve dans `extensions/Overflow-AE2018/`. Pour l'installer, copiez ce dossier dans `%APPDATA%/Adobe/CEP/extensions/`, fermez puis relancez After Effects et ouvrez le panneau **Window > Extensions > OVER FLOW**. La licence MIT est incluse dans le dossier.
+L'extension CEP complete se trouve dans `extensions/Overflow-AE2018/`. Sous Windows, fermez After Effects et lancez `extensions/Overflow-AE2018/INSTALL_OVERFLOW.cmd`, puis relancez After Effects et ouvrez **Window > Extensions > OVER FLOW**. L'installation ne demande pas de droits administrateur. La licence MIT est incluse dans le dossier.
 
 Elle propose notamment des courbes Bezier, des outils d'interpolation et de manipulation de calques. Aucun framework ou composant commercial tiers n'est inclus.
 
