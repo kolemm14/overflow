@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0" ExtensionBundleId="com.fxp.twitch.v3" ExtensionBundleVersion="3.0.0" ExtensionBundleName="FXP Twitch 3">
+<ExtensionList><Extension Id="com.fxp.twitch.v3.panel" Version="3.0.0"/></ExtensionList>
+<ExecutionEnvironment><HostList><Host Name="AEFT" Version="[17.0,18.9]"/></HostList><LocaleList><Locale Code="All"/></LocaleList><RequiredRuntimeList><RequiredRuntime Name="CSXS" Version="10.0"/></RequiredRuntimeList></ExecutionEnvironment>
+<DispatchInfoList><Extension Id="com.fxp.twitch.v3.panel"><DispatchInfo><Resources><MainPath>./index.html</MainPath><ScriptPath>./host.jsx</ScriptPath></Resources><Lifecycle><AutoVisible>true</AutoVisible></Lifecycle><UI><Type>Panel</Type><Menu>FXP Twitch 3</Menu><Geometry><Size><Width>360</Width><Height>700</Height></Size><MinSize><Width>280</Width><Height>300</Height></MinSize></Geometry></UI></DispatchInfo></Extension></DispatchInfoList>
+</ExtensionManifest>

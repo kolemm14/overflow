@@ -1,0 +1,19 @@
+(function(){'use strict';
+var cs=new CSInterface(),values={x1:.25,y1:.1,x2:.25,y2:1},scope='both',dragging=null;
+var presets=[{name:'DOUX',v:[.25,.1,.25,1]},{name:'EASE IN',v:[.42,0,1,1]},{name:'EASE OUT',v:[.001,0,.58,1]},{name:'IN / OUT',v:[.42,0,.58,1]},{name:'SNAPPY',v:[.16,1,.3,1]},{name:'OVERSHOOT',v:[.34,1.55,.64,1]}];
+function el(id){return document.getElementById(id)}function clamp(n,a,b){return Math.max(a,Math.min(b,n))}function fixed(n){return Math.round(n*1000)/1000}
+function status(message,type){var e=el('status');e.className='status'+(type?' '+type:'');e.textContent=message||''}
+function run(code){cs.evalScript(code,function(result){result=String(result||'ERR|Aucune reponse.');var p=result.indexOf('|'),kind=p>=0?result.substring(0,p):'ERR',message=p>=0?result.substring(p+1):result;status(message,kind==='OK'?'ok':'error')})}
+function point(x,y){return{x:x*300,y:(1-y)*180}}
+function sync(){el('x1').value=fixed(values.x1);el('y1').value=fixed(values.y1);el('x2').value=fixed(values.x2);el('y2').value=fixed(values.y2)}
+function draw(){var a=point(values.x1,values.y1),b=point(values.x2,values.y2);el('handle1').setAttribute('cx',a.x);el('handle1').setAttribute('cy',a.y);el('handle2').setAttribute('cx',b.x);el('handle2').setAttribute('cy',b.y);el('line1').setAttribute('x2',a.x);el('line1').setAttribute('y2',a.y);el('line2').setAttribute('x2',b.x);el('line2').setAttribute('y2',b.y);el('curve').setAttribute('d','M0 180 C'+a.x+' '+a.y+' '+b.x+' '+b.y+' 300 0');sync()}
+function setValues(v){values.x1=clamp(Number(v[0]),.001,.999);values.y1=clamp(Number(v[1]),-2,3);values.x2=clamp(Number(v[2]),.001,.999);values.y2=clamp(Number(v[3]),-2,3);draw()}
+function clearPresets(){var b=document.querySelectorAll('.preset-grid button'),i;for(i=0;i<b.length;i++)b[i].classList.remove('active')}
+function inputValue(id,fallback){var n=parseFloat(el(id).value);return isFinite(n)?n:fallback}
+function readInputs(){setValues([inputValue('x1',values.x1),inputValue('y1',values.y1),inputValue('x2',values.x2),inputValue('y2',values.y2)]);clearPresets()}
+function makePresets(){var holder=el('presets'),i;for(i=0;i<presets.length;i++){(function(p){var b=document.createElement('button');b.textContent=p.name;b.onclick=function(){clearPresets();b.classList.add('active');setValues(p.v)};holder.appendChild(b)}(presets[i]))}}
+function coords(e){var r=el('graph').getBoundingClientRect();return{x:clamp((e.clientX-r.left)/r.width,.001,.999),y:clamp(1-(e.clientY-r.top)/r.height,-2,3)}}
+function move(e){if(!dragging)return;var p=coords(e);if(dragging===1){values.x1=p.x;values.y1=p.y}else{values.x2=p.x;values.y2=p.y}clearPresets();draw()}
+function bind(){var inputs=document.querySelectorAll('.coords input'),scopes=document.querySelectorAll('.scope'),i;for(i=0;i<inputs.length;i++)inputs[i].onchange=readInputs;for(i=0;i<scopes.length;i++)scopes[i].onclick=function(){var j;for(j=0;j<scopes.length;j++)scopes[j].classList.remove('active');this.classList.add('active');scope=this.getAttribute('data-scope')};el('handle1').onmousedown=function(e){dragging=1;e.preventDefault()};el('handle2').onmousedown=function(e){dragging=2;e.preventDefault()};document.onmousemove=move;document.onmouseup=function(){dragging=null};el('mirror').onclick=function(){setValues([1-values.x2,1-values.y2,1-values.x1,1-values.y1]);clearPresets()};el('apply').onclick=function(){run('CurveFusionHost.applyCurve('+[values.x1,values.y1,values.x2,values.y2].join(',')+',\''+scope+'\')')};el('copy').onclick=function(){run('CurveFusionHost.copyEase()')};el('paste').onclick=function(){run('CurveFusionHost.pasteEase()')};el('linear').onclick=function(){run("CurveFusionHost.setMode('linear')")};el('hold').onclick=function(){run("CurveFusionHost.setMode('hold')")};el('zero').onclick=function(){run('CurveFusionHost.zeroVelocity()')};el('continuous').onclick=function(){run('CurveFusionHost.makeContinuous()')};el('apply').focus()}
+makePresets();bind();draw();
+}());

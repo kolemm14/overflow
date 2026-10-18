@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ease Pro</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <strong>Ease Pro <span>(AE 2018)</span></strong>
+    <div class="header-actions"><button id="settings" title="Réglages">⚙</button><button id="closeHint" title="Réinitialiser l’interface">×</button></div>
+  </header>
+
+  <main class="workspace">
+    <aside class="library-panel">
+      <nav class="tabs" aria-label="Bibliothèque">
+        <button class="tab active" data-tab="curves">Courbes</button>
+        <button class="tab" data-tab="presets">Presets</button>
+        <button class="tab" data-tab="library">Bibliothèque</button>
+      </nav>
+      <div class="library-controls">
+        <select id="curveFilter" aria-label="Filtrer les courbes">
+          <option value="all">Essentiels</option><option value="Basic">Basic</option><option value="In">In</option>
+          <option value="Out">Out</option><option value="In Out">In Out</option><option value="Impact">Impact</option>
+          <option value="Overshoot">Overshoot</option><option value="Bounce">Bounce</option><option value="Custom">Custom</option>
+        </select>
+      </div>
+      <div id="curveCards" class="curve-grid"></div>
+      <button id="importPresets" class="wide secondary">▣&nbsp;&nbsp;Importer des presets…</button>
+      <input id="fileInput" type="file" accept="application/json,.json" hidden>
+    </aside>
+
+    <section class="editor-panel">
+      <div class="coordinate-readout">X: <span id="coordX">0.42</span>&nbsp;&nbsp;&nbsp; Y: <span id="coordY">0.68</span></div>
+      <div class="graph-layout">
+        <div class="graph-wrap"><canvas id="graph" aria-label="Éditeur de courbe Bézier"></canvas></div>
+        <div class="graph-tools" aria-label="Outils du graphe">
+          <button class="tool active" data-tool="select" title="Sélection / déplacement">↖</button>
+          <button class="tool" data-tool="bezier" title="Édition Bézier">⌁</button>
+          <button class="tool" data-tool="add" title="Ajouter / répartir les poignées">＋</button>
+          <button class="tool" data-tool="simplify" title="Simplifier la courbe">—</button>
+          <button class="tool" data-tool="linear" title="Conversion linéaire">╱</button>
+          <button class="tool" data-tool="reset" title="Réinitialiser">↻</button>
+        </div>
+      </div>
+      <div class="preview-row">
+        <label class="check"><input id="livePreview" type="checkbox"><span></span>Aperçu en temps réel</label>
+        <button id="resetCurve">↶&nbsp; Réinitialiser</button>
+      </div>
+      <div class="editor-apply" aria-label="Application de la courbe">
+        <button id="apply" class="primary">Appliquer aux keyframes&nbsp;&nbsp; ↵</button>
+        <button id="applyIn">╱&nbsp; Appliquer In</button>
+        <button id="applyOut">╱&nbsp; Appliquer Out</button>
+      </div>
+      <div class="sliders">
+        <div class="slider-row"><label>Influence</label><input id="influence" type="range" min="1" max="99" value="33"><input id="influenceN" type="number" min="1" max="99" value="33"><b>%</b></div>
+        <div class="slider-row"><label>Vitesse</label><input id="speed" type="range" min="0" max="300" value="100"><input id="speedN" type="number" min="0" max="300" value="100"><b>%</b></div>
+        <div class="slider-row"><label>Ease In</label><input id="easeIn" type="range" min="1" max="99" value="33"><input id="easeInN" type="number" min="1" max="99" value="33"><b>%</b></div>
+        <div class="slider-row"><label>Ease Out</label><input id="easeOut" type="range" min="1" max="99" value="33"><input id="easeOutN" type="number" min="1" max="99" value="33"><b>%</b></div>
+      </div>
+      <div class="bezier-values">
+        <label>x1<input id="x1" type="number" min="0.01" max="0.99" step="0.01"></label>
+        <label>y1<input id="y1" type="number" min="-1" max="2" step="0.01"></label>
+        <label>x2<input id="x2" type="number" min="0.01" max="0.99" step="0.01"></label>
+        <label>y2<input id="y2" type="number" min="-1" max="2" step="0.01"></label>
+      </div>
+    </section>
+
+    <aside class="actions-panel">
+      <section class="action-card"><h2>Outils</h2>
+        <button id="copy">▣&nbsp; Copier l’easing</button><button id="paste">▢&nbsp; Coller l’easing</button>
+        <button id="invert">⇄&nbsp; Inverser la courbe</button><button id="soften">⌁&nbsp; Adoucir</button>
+        <button id="accentuate">〰&nbsp; Accentuer</button><button id="linear">╱&nbsp; Rendre linéaire</button>
+      </section>
+      <section class="action-card"><h2>Presets</h2>
+        <button id="saveCurrent" class="wide">＋&nbsp; Sauvegarder comme preset…</button>
+        <div class="save-row"><input id="presetName" maxlength="40" placeholder="Mon preset"><button id="savePreset">Enregistrer</button></div>
+      </section>
+      <section class="action-card"><h2>Export / Import</h2>
+        <div class="two"><button id="exportPresets">⇩&nbsp; Exporter…</button><button id="importPresetsRight">⇧&nbsp; Importer…</button></div>
+      </section>
+      <div id="status" role="status">Prêt — sélectionnez des keyframes.</div>
+    </aside>
+  </main>
+  <footer>Ease Pro v3.0.5 <span>Compatible After Effects 2018</span><em>Animer plus vite. Plus librement.</em></footer>
+
+  <script src="js/curves.js"></script><script src="js/bridge.js"></script><script src="js/graph-editor.js"></script>
+  <script src="js/presets.js"></script><script src="js/main.js"></script>
+</body>
+</html>

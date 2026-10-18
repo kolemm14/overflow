@@ -1,12 +1,24 @@
 # Extensions et plugins After Effects
 
-Ce depot public regroupe les plugins natifs FX Pro pour After Effects 2020 et l'extension CEP OVER FLOW pour After Effects CC 2018-2020.
+Ce depot public regroupe les extensions CEP personnalisees et les plugins natifs FX Pro pour After Effects.
 
-## OVER FLOW pour AE CC 2018-2020
+## Extensions CEP
 
-L'extension CEP complete se trouve dans `extensions/Overflow-AE2018/`. Sous Windows, fermez After Effects et lancez `extensions/Overflow-AE2018/INSTALL_OVERFLOW.cmd`, puis relancez After Effects et ouvrez **Window > Extensions > OVER FLOW**. L'installation ne demande pas de droits administrateur. La licence MIT est incluse dans le dossier.
+Les extensions installees et leurs fichiers sont rangees sous `extensions/` :
 
-Elle propose notamment des courbes Bezier, des outils d'interpolation et de manipulation de calques. Aucun framework ou composant commercial tiers n'est inclus.
+- `CurveFusion-AE2018/` : Curve Fusion 2018.
+- `EasePro-AE2018/` : Ease Pro 3.0.5, compatible AE 2018-2020.
+- `EditTools-Free-AE2020/` : EditTools Free 1.0.1.
+- `FXP-Twitch-AE2020/` : FXP Twitch 1.0.
+- `FXP-Twitch-v3/` : FXP Twitch 3.0.
+- `Overflow-AE2018/` : OVER FLOW 0.2.
+- `PulseForge-FX-AE2020/` : PulseForge FX 1.1.
+
+Pour installer OVER FLOW sous Windows, fermez After Effects et lancez `extensions/Overflow-AE2018/INSTALL_OVERFLOW.cmd`. Pour les autres extensions, suivez le README ou les instructions inclus dans leur dossier. Relancez After Effects apres l'installation.
+
+Keshav Velo n'est pas inclus : l'extension installee contient des ressources tierces (images, presets et police) sans licence de redistribution identifiable. Les copies de sauvegarde Ease Pro sans manifeste actif, les signatures generees et les plugins tiers installes avec Adobe ne sont pas inclus non plus.
+
+La licence MIT d'OVER FLOW est incluse. Les autres dossiers ne contiennent pas de licence de redistribution explicite ; leur publication ici ne leur en ajoute pas une.
 
 ## FX Pro pour After Effects 2020
 

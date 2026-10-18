@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0" ExtensionBundleId="com.pulseforge.fx.ae2020" ExtensionBundleVersion="1.1.0" ExtensionBundleName="PulseForge FX">
+  <ExtensionList><Extension Id="com.pulseforge.fx.ae2020.panel" Version="1.1.0" /></ExtensionList>
+  <ExecutionEnvironment><HostList><Host Name="AEFT" Version="[17.0,18.9]" /></HostList><LocaleList><Locale Code="All" /></LocaleList><RequiredRuntimeList><RequiredRuntime Name="CSXS" Version="10.0" /></RequiredRuntimeList></ExecutionEnvironment>
+  <DispatchInfoList><Extension Id="com.pulseforge.fx.ae2020.panel"><DispatchInfo><Resources><MainPath>./index.html</MainPath><ScriptPath>./jsx/host.jsx</ScriptPath><CEFCommandLine><Parameter>--disable-gpu</Parameter><Parameter>--disable-gpu-compositing</Parameter></CEFCommandLine></Resources><Lifecycle><AutoVisible>true</AutoVisible></Lifecycle><UI><Type>Panel</Type><Menu>PulseForge FX</Menu><Geometry><Size><Width>430</Width><Height>720</Height></Size><MinSize><Width>300</Width><Height>450</Height></MinSize><MaxSize><Width>1600</Width><Height>1600</Height></MaxSize></Geometry></UI></DispatchInfo></Extension></DispatchInfoList>
+</ExtensionManifest>

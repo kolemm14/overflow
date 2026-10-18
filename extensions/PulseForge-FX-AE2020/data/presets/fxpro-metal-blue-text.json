@@ -1,0 +1,14 @@
+{
+  "id": "fxpro-metal-blue-text",
+  "name": "Metal Blue Text",
+  "provider": "FX Pro",
+  "category": "Text",
+  "subcategory": "Logo / AMV",
+  "tags": ["text", "metal", "blue", "cyan", "logo", "anime", "amv", "gaming"],
+  "requiresPlugin": false,
+  "compatibility": "After Effects 2020+",
+  "script": "Apply_Text_Metal_Blue.jsx",
+  "thumbnail": "fxpro-metal-blue-text.png",
+  "variants": ["DEFAULT", "DARK", "BRIGHT", "AMV", "SILVER BLUE"]
+}
+

@@ -1,0 +1,46 @@
+FXP TWITCH 3 - VERSION DE DEVELOPPEMENT
+
+INSTALLATION SUR CE PC
+Deja copiee dans le dossier des extensions Adobe CEP de votre compte.
+Apres enregistrement du projet et redemarrage AE :
+Window > Extensions > FXP Twitch 3.
+La version precedente reste disponible sous FXP Twitch.
+
+UTILISATION
+1. Ouvrir la composition et cliquer Creer TWITCH 3.
+2. Choisir un style, Charger le style, puis Mettre a jour.
+3. Pour un impact : placer la tete de lecture au moins une image apres le debut,
+   conserver six images libres avant la fin, puis Ajouter l'impact.
+4. Amount controle l'intensite. Amount = 0 desactive le calque d'effets.
+5. Desactiver les anciens calques Twitch pour ne pas cumuler les effets.
+
+MODULES
+Slide : direction, dispersion et amplitude.
+Scale : zoom positif. Rotation : secousses angulaires.
+Light : clair, sombre ou mixte. Blur : flou variable.
+Color : variation de teinte via Color Balance (HLS).
+RGB : aberration chromatique rouge/bleue via l'effet VR natif.
+Ce RGB est radial ; ce n'est pas une translation exacte des canaux de Twitch.
+Chaque module dispose d'une vitesse relative et d'une graine aleatoire.
+Chance : probabilite d'un declenchement a chaque pas.
+Hold : part active d'un pas. Decay : retour progressif en fin de pas.
+Sync synchronise les declenchements lorsque les vitesses et graines sont egales.
+Motion Blur : angle de l'effet Transformation, de 0 a 360.
+Les styles modifient le formulaire ; Mettre a jour les applique.
+Les controles deja animes ou pilotes par expression sont conserves.
+Impact refuse de remplacer les cles deja presentes dans la zone.
+
+VALIDATION ET LIMITES
+Syntaxe et logique des declenchements verifiees automatiquement.
+Creation native testee dans AE 2020 ; identifiants Transformation releves
+directement sur cette version, puis corriges (echelle, rotation, obturation).
+Une incompatibilite de teinte a ete corrigee avec Color Balance (HLS).
+Le test complet de rendu a ralenti AE et n'a pas abouti ; performances,
+fluidite et rendu final ne sont pas encore valides. Commencer sur une copie.
+RGB est desactive avec un message si l'effet VR manque.
+Pas de module Time. Pas de garantie de compatibilite avec d'autres versions.
+Ce produit natif independant n'est pas le plugin Video Copilot, ni un .aex.
+
+SOURCES TECHNIQUES ADOBE
+https://helpx.adobe.com/il_en/after-effects/using/vr-effects.html
+https://helpx.adobe.com/after-effects/desktop/automate-in-after-effects/automate-animation/scripts.html

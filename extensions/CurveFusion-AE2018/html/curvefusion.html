@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Curve Fusion 2018</title><link rel="stylesheet" href="../css/curvefusion.css">
+</head>
+<body>
+<main class="panel">
+    <header class="header"><div><h1>CURVE FUSION</h1><p>Courbes &amp; velocite — AE 2018</p></div><span class="badge">15.1</span></header>
+    <section class="graph-card">
+        <svg id="graph" viewBox="0 0 300 180">
+            <rect class="graph-bg" x="0" y="0" width="300" height="180"></rect>
+            <g class="grid"><line x1="75" y1="0" x2="75" y2="180"></line><line x1="150" y1="0" x2="150" y2="180"></line><line x1="225" y1="0" x2="225" y2="180"></line><line x1="0" y1="45" x2="300" y2="45"></line><line x1="0" y1="90" x2="300" y2="90"></line><line x1="0" y1="135" x2="300" y2="135"></line></g>
+            <path class="diagonal" d="M0 180 L300 0"></path>
+            <line id="line1" class="handle-line" x1="0" y1="180"></line><line id="line2" class="handle-line" x1="300" y1="0"></line>
+            <path id="curve" class="curve" d="M0 180 C75 162 225 18 300 0"></path>
+            <circle class="anchor" cx="0" cy="180" r="4"></circle><circle class="anchor" cx="300" cy="0" r="4"></circle>
+            <circle id="handle1" class="handle" r="8"></circle><circle id="handle2" class="handle" r="8"></circle>
+        </svg>
+        <div class="coords"><label>X1<input id="x1" type="number" step="0.001"></label><label>Y1<input id="y1" type="number" step="0.01"></label><label>X2<input id="x2" type="number" step="0.001"></label><label>Y2<input id="y2" type="number" step="0.01"></label></div>
+    </section>
+    <section><div class="section-title"><span>PRESETS</span><button id="mirror" class="text-btn">MIROIR</button></div><div id="presets" class="preset-grid"></div></section>
+    <section>
+        <div class="section-title"><span>APPLIQUER</span><span class="hint">images cles selectionnees</span></div>
+        <div class="scope-row"><button class="scope" data-scope="in">ENTREE</button><button class="scope active" data-scope="both">LES DEUX</button><button class="scope" data-scope="out">SORTIE</button></div>
+        <button id="apply" class="primary">APPLIQUER LA COURBE</button>
+    </section>
+    <section><div class="section-title"><span>OUTILS</span></div><div class="tool-grid"><button id="copy">COPIER</button><button id="paste">COLLER</button><button id="linear">LINEAIRE</button><button id="hold">MAINTIEN</button><button id="zero">VITESSE 0</button><button id="continuous">CONTINU</button></div></section>
+    <footer id="status" class="status">Selectionnez des images cles.</footer>
+</main>
+<script src="../js/libs/CSInterface.js"></script><script src="../js/curvefusion.js"></script>
+</body></html>
