@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="6.0" ExtensionBundleId="com.kbsama.overflow.ae2018" ExtensionBundleVersion="0.2.0" ExtensionBundleName="OVER FLOW">
+  <ExtensionList><Extension Id="com.kbsama.overflow.panel" Version="0.2.0" /></ExtensionList>
+  <ExecutionEnvironment>
+    <HostList><Host Name="AEFT" Version="[15.0,17.9]" /></HostList>
+    <LocaleList><Locale Code="All" /></LocaleList>
+    <!-- AE 2018 ships CEP/PlugPlug 8 but rejects RequiredRuntime 8.0; 7.0 is schema-compatible. -->
+    <RequiredRuntimeList><RequiredRuntime Name="CSXS" Version="7.0" /></RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <Extension Id="com.kbsama.overflow.panel">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./index.html</MainPath><ScriptPath>./jsx/host.jsx</ScriptPath>
+          <CEFCommandLine><Parameter>--allow-file-access-from-files</Parameter></CEFCommandLine>
+        </Resources>
+        <Lifecycle><AutoVisible>true</AutoVisible></Lifecycle>
+        <UI><Type>Panel</Type><Menu>OVER FLOW</Menu><Geometry><Size><Width>360</Width><Height>680</Height></Size><MinSize><Width>290</Width><Height>420</Height></MinSize></Geometry></UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>
